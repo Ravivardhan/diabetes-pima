@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result | DiabetesCare</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DiabetesCare</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('homepage') }}">Home</a></li>
+        <li><a href="form.html">Analysis</a></li>
+        <li><a href="{{ url_for('form_result') }}">Result</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Result Section -->
+  <div class="form-container">
+    <h2>Prediction Result</h2>
+    <div class="result-box">
+      <p><strong>Prediction:</strong> No Diabetes</p>
+      <p><strong>Advice:</strong> Maintain a healthy diet and regular exercise.</p>
+    </div>
+    <a href="homepage" class="btn">Back to Home</a>
+  </div>
+
+</body>
+</html>
