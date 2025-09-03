@@ -9,14 +9,14 @@ function validateLogin() {
         alert("All fields are required!");
         return false;
     }
+
     if (password.length < 6) {
         alert("Password must be at least 6 characters.");
         return false;
     }
 
-    // Redirect to home page after successful login
-    window.location.href = "home.html";
-    return false; // prevent default submission
+    // DO NOT redirect with JS; allow form POST for Flask authentication
+    return true;
 }
 
 // Register validation
@@ -30,18 +30,19 @@ function validateRegister() {
         alert("All fields are required!");
         return false;
     }
+
     if (password.length < 6) {
         alert("Password must be at least 6 characters.");
         return false;
     }
+
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
         return false;
     }
 
-    alert("Registration Successful!");
-    window.location.href = "login.html"; // Redirect after registration
-    return false;
+    // DO NOT redirect with JS; allow form POST for Flask registration
+    return true;
 }
 
 // Diabetes form validation - 8 fields
