@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diabetes Prediction System</title>
@@ -12,16 +15,25 @@
     <nav class="navbar">
       <div class="logo">DiabetesCare</div>
       <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="form.html">Prediction Form</a></li>
-        <li><a href="result.html">Result</a></li>
-        <li><a href="login.html">Logout</a></li>
+        <li><a href="{{ url_for('homepage') }}">Home</a></li>
+        <li><a href="{{ url_for('form') }}">Form</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        <li><a href="{{ url_for('form_result') }}">Result</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
           </div>
         </li>
       </ul>
     </nav>
   </header>
-
+  
+<section class="banner" id="home">
+        <div class="content">
+            <h1>Check your diabetes risk instantly with our secure and accurate system.</h1>
+            <a href="#" class="btnn">Start Prediction</a>
+            <p>Our Diabetes Prediction System is designed to help individuals understand their health risks better. Using advanced algorithms, it provides insights into the possibility of diabetes based on personal health parameters.</p>
+            <p>The system is built with a user-friendly interface, ensuring accessibility for everyone, especially those seeking quick medical guidance. While this tool cannot replace professional medical advice, it encourages awareness and timely consultation with healthcare providers.</p>
+        </div>
+    </section>
   <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
@@ -45,6 +57,12 @@
       medical advice, it encourages awareness and timely consultation with healthcare providers.
     </p>
   </section>
+   <script type="text/javascript">
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, "", window.location.href);
+        };
+    </script>
 
   <!-- Footer -->
   <footer>
