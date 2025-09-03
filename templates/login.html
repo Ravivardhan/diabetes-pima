@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | DiabetesCare</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+
+  <div class="form-container">
+    <img src="https://img.icons8.com/ios-filled/100/2e7d32/lock-2.png" alt="Lock Icon">
+    <h2>Login</h2>
+
+    <form id="loginForm" onsubmit="return validateLogin()">
+      <div class="input-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required minlength="6">
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <p>Don’t have an account? <a href="register.html">Register</a></p>
+    </form>
+  </div>
+
+</body>
+</html>

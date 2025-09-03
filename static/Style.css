@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5fff5;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #3ea873;  /* updated */
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+header {
+    background: #4caf7d;   /* updated */
+    padding: 15px 40px;
+    color: #fff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;  /* full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background: url("imagedb3.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 42px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    color: whitesmoke;
+     font-weight: bold;
+}
+
+.hero-content .btn {
+    width: 160px; /* reduced width */
+    margin: 20px auto 0 auto; /* centers the button */
+    display: block; /* ensures margin auto works */
+    padding: 10px 0;
+    background: #4caf7d;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-content .btn:hover {
+    background: #3ea873;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    text-align: center;
+    
+}
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Forms */
+.form-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.form-container img {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #3ea873;   /* updated */
+}
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.btn {
+    display: block;
+    width: 150px;
+    margin: 20px auto 0 auto;
+    background: #4caf7d;   /* updated */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+.btn:hover {
+    background: #3ea873;   /* updated */
+}
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+p a {
+    color: #4caf7d;   /* updated */
+    text-decoration: none;
+    font-weight: 500;
+}
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Result Page */
+.result-container, .result-box {
+    text-align: center;
+    margin: 50px auto;
+}
+.result-box {
+    padding: 20px;
+    background: #d8f3e2;   /* updated */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #4caf7d;   /* updated */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+}
