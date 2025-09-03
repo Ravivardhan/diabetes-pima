@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis | DiabetesCare</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DiabetesCare</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="form.html">Analysis</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="login.html">Logout</a></li>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <div class="form-container">
+    <h2>Diabetes Prediction Form</h2>
+
+    <form id="diabetesForm" onsubmit="return handleFormSubmitPage()">
+      <div class="input-group">
+        <label for="pregnancies">Pregnancies</label>
+        <input type="number" id="pregnancies" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="glucose">Glucose</label>
+        <input type="number" id="glucose" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="bp">Blood Pressure</label>
+        <input type="number" id="bp" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="skinThickness">Skin Thickness</label>
+        <input type="number" id="skinThickness" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="insulin">Insulin</label>
+        <input type="number" id="insulin" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="bmi">BMI</label>
+        <input type="number" id="bmi" step="0.1" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="dpf">Diabetes Pedigree Function</label>
+        <input type="number" id="dpf" step="0.01" min="0" required>
+      </div>
+      <div class="input-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" required>
+      </div>
+
+      <button type="submit" class="btn">Predict</button>
+    </form>
+  </div>
+
+  <script>
+    // Redirect to result page on successful validation
+    function handleFormSubmitPage() {
+      if(validateForm()) {
+        window.location.href = "result.html";
+        return false;
+      }
+      return false;
+    }
+  </script>
+
+</body>
+</html>
